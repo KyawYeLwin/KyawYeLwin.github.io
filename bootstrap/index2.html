@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website index2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="carousel.css" rel="stylesheet">
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #c21f1f;
+  }
+  </style>
+</head>
+<body style="background-color: gainsboro;">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Anmol</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">About</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="first-slide" src="images/france.png" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>Euro2024</h1>
+              <p>France beat Portugal on penalties to face Spain in semifinal</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Find out more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="second-slide" src="images/argen.png" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Copa America 2024</h1>
+              <p>Can Argentina's continental dominance continue?</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="third-slide" src="images/manu.png" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption text-right">
+              <h1>Premier League</h1>
+              <p>Can Manchester United return to former glory?</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">More Info</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="images/evs.png" alt="evs" width="150" height="150">
+          <h2>England vs Switzerland</h2>
+          <p>Konsa on whether England can go all the way: "That depends on us. If we continue to show the spirit and the togetherness I'm sure we can go to the very end and win it all."</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="images/pvf.png" alt="pvf" width="150" height="150">
+          <h2>Portugal vs France</h2>
+          <p>Ousmane Dembélé, France forward: "We had practised penalties and felt confident going into them. We learned a lot from our experience at the World Cup in Qatar [losing the final on penalties to Argentina]. We deserve this victory."</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="rounded-circle" src="images/svg.png" alt="svg" width="150" height="150">
+          <h2>Spain vs Germany</h2>
+          <p>Havertz on the support from the fans over the last weeks: "The fans were outstanding, it was an incredible atmosphere. We are very thankful and grateful for them. On the one side there is pride, but also sadness that we couldn't give them more."</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Reports: <span class="text-muted">Spot-on England Through</span></h2>
+          <p class="lead">Jordan Pickford saved Manuel Akanji's spot kick as England edged out a resilient Switzerland side to reach the UEFA EURO 2024 semi-finals.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto; width-[500px]" src="images/england.png" alt="reports">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Semi-Final fixtures <span class="text-muted">confirmed</span></h2>
+          <p class="lead">The UEFA EURO 2024 semi-finals kick off with Spain vs France on Tuesday before Netherlands take on England the following day. The two victors progress to the final at Berlin's Olympiastadion on Sunday 14 July.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img class="featurette-image img-fluid mx-auto" src="images/fixture.png" alt="Fixtures">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Meet the <span class="text-muted">semi-finalist</span></h2>
+          <p class="lead">Get the full lowdown on the four teams still in contention for glory in Germany.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid mx-auto" src="images/semi.png" alt="semi-finalist">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+
+</body>
