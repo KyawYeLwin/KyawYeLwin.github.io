@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Car Accessories Quotation</title>
+    <meta name="description" content="Company quotation" />
+    <meta name="author" content="SitePoint" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+      }
+      .container {
+        margin-top: 20px;
+      }
+      h2, h3, h1 {
+        color: #343a40;
+      }
+      .header, .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 10px 0;
+      }
+      .header h2 {
+        margin: 0;
+      }
+      .header img {
+        border-radius: 50%;
+      }
+      .quotation-title {
+        margin-top: 20px;
+      }
+      .table {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .table thead {
+        background-color: #343a40;
+        color: white;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+      .modal-header {
+        background-color: #343a40;
+        color: white;
+      }
+      .modal-footer .btn-secondary {
+        background-color: #6c757d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <h2 style="display: flex; justify-content: center; margin-bottom: 15px; font-weight: bold; font-size: 50px;">Car Accessory</h2>
+      <div class="row header">
+        
+        <div class="col-sm-3" style="color: aliceblue;">
+          
+          <p>
+            Bangsaothong,<br />
+            Samutrprakarn,<br />
+            Thailand,<br />
+            53100<br />
+            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>: 08123215522<br />
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>: +11 12223320
+          </p>
+        </div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-3 text-center">
+          <div style="display: flex; justify-content: center; align-items: flex-start;">
+            <img
+              src="/img/car.jpg"
+              alt="Car Image"
+              style="width: 150px; height: 150px; margin-top: 10px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="container ">
+        <div class="row">
+          <div class="col-sm-9"></div>
+          <div class="col-sm-3">
+            <div class="billing-address">
+              <h3>Billing Address</h3>
+              <p class="address-line">
+            <strong>Harry Potter</strong><br />
+            122/34 Under the Staircase<br />
+            Diagon Alley<br />
+            London, UK<br />
+            Postal Code: 12345
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        Add Item
+      </button>
+      </div>
+      
+
+      <table
+        class="table table-striped table-bordered table-condensed"
+        id="quotationTable"
+      >
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+
+        <tfoot>
+          <tr id="sub-total">
+            <td colspan="3" class="text-right">Subtotal</td>
+            <td colspan="1" class="text-right" id="subTotal">---</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="text-right">VAT</td>
+            <td colspan="1" class="text-right" id="vat">--</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="text-right">Shipping & Handling</td>
+            <td colspan="1" class="text-right" id="bottom-line">0.00</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="text-right">Total Due</td>
+            <td colspan="1" class="text-right" id="total">--</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <br />
+
+      <div class="footer text-center">
+        <p>Kyaw Ye Lwin @ Anmol</p>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel">Add Item</h2>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <tr>
+                  <td>
+                    <label for="accessory">Accessory:</label>
+                    <select id="accessory" name="accessory" class="form-control">
+                      <!-- Options will be populated dynamically -->
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="amount">Amount:</label>
+                    <input
+                      type="number"
+                      id="amount"
+                      name="amount"
+                      class="form-control"
+                      min="1"
+                      value="1"
+                    />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" onclick="addItem()">
+                Save New Item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var quoationData = [];
+      var accessories = [];
+
+      // Fetch accessory data from JSON file
+      function fetchAccessories() {
+        $.getJSON("/data/data.json", function (data) {
+          accessories = data;
+          populateAccessoryDropdown();
+        });
+      }
+
+      // Populate dropdown with accessories
+      function populateAccessoryDropdown() {
+        var $accessorySelect = $("#accessory");
+        $accessorySelect.empty();
+        accessories.forEach(function (item) {
+          $accessorySelect.append(
+            `<option value="${item.id}" data-price="${item.price}">${item.name}</option>`
+          );
+        });
+      }
+
+      // Add new item to the quotation
+      function addItem() {
+        var $selectedOption = $("#accessory option:selected");
+        var description = $selectedOption.text();
+        var unitPrice = parseFloat($selectedOption.data("price"));
+        var quantity = parseFloat($("#amount").val());
+        var amount = unitPrice * quantity;
+
+        quoationData.push({
+          description: description,
+          quantity: quantity,
+          unitPrice: unitPrice,
+        });
+
+        $("#exampleModal").modal("hide");
+        renderTable();
+      }
+
+      // Render the table with updated data
+      function renderTable() {
+        var subTotal = quoationData.reduce(function (sum, item) {
+          return sum + (item.unitPrice * item.quantity);
+        }, 0);
+
+        var vat = (subTotal * 0.07).toFixed(2);
+        var total = (subTotal * 1.07).toFixed(2);
+
+        $("#subTotal").text(subTotal.toFixed(2));
+        $("#vat").text(vat);
+        $("#total").text(total);
+
+        var dataRows = quoationData.map(function (item, index) {
+          var amount = item.quantity * item.unitPrice;
+          return `
+            <tr class="data-row">
+              <td class="text-center">${item.quantity}</td>
+              <td class="data">
+                <button onclick="deleteItem(${index})">X</button>
+                ${item.description}
+              </td>
+              <td class="text-right">${item.unitPrice.toFixed(2)}</td>
+              <td class="text-right">${amount.toFixed(2)}</td>
+            </tr>`;
+        });
+
+        $(".data-row").remove();
+        $("#quotationTable tbody").append(dataRows.join(""));
+      }
+
+      // Delete item from the table
+      function deleteItem(index) {
+        quoationData.splice(index, 1);
+        renderTable();
+      }
+
+      $(document).ready(function () {
+        fetchAccessories(); // Fetch accessories data on page load
+
+        // Optionally, initialize with some existing data
+        // $.getJSON("data/initial-data.json", function (data) {
+        //   quoationData = data;
+        //   renderTable();
+        // });
+      });
+    </script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

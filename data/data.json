@@ -1,0 +1,23 @@
+[
+    {
+      "id": "p123",
+      "name": "Car Cover",
+      "price": 50
+    },
+    {
+      "id": "p234",
+      "name": "Seat Covers",
+      "price": 30
+    },
+    {
+      "id": "p456",
+      "name": "Floor Mats",
+      "price": 20
+    },
+    {
+      "id": "p996",
+      "name": "Door Visors",
+      "price": 40
+    }
+  ]
+  
